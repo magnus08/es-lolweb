@@ -1,8 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+__webpack_public_path__ = window.appContextPath; // eslint-disable-line
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+require('./setup.js');

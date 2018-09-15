@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -19,22 +19,106 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Reporting Local</title>
+
+    <!-- css block from https://experience.learnifier.com/client/site/listProjects/2573 -->
+    <link rel='stylesheet' type='text/css' href='https://d3fv9e7p6vofdm.cloudfront.net/223/cocobox/messenger-1.4.1/build/css/messenger.css'/>
+    <link rel='stylesheet' type='text/css' href='https://d3fv9e7p6vofdm.cloudfront.net/223/cocobox/messenger-1.4.1/build/css/messenger-theme-flat.css'/>
+
+    <!-- SKIN:SECTION head BEGIN --><link href='https://dkqgk8jq4t1u0.cloudfront.net/branding/2273/65261745-ee60-4082-a7a4-335a3ce13dbe/css/learnifier-bootstrap.css' rel='stylesheet' type='text/css' media='screen' />
+    <link rel="stylesheet" href="https://d3fv9e7p6vofdm.cloudfront.net/223/cocobox/ccss/clientportalweb/clientportal.css" />
+    <link href='https://dkqgk8jq4t1u0.cloudfront.net/branding/1759/61fd4f33-119b-494d-9283-8362b5ad33cb/apple-touch-icon.png' rel='apple-touch-icon-precomposed' />
+    <meta name="msapplication-config" content="https://dkqgk8jq4t1u0.cloudfront.net/branding/1759/61fd4f33-119b-494d-9283-8362b5ad33cb/browserconfig.xml" />
+    <meta name="theme-color" content="#e84c3c" /><link href='https://dkqgk8jq4t1u0.cloudfront.net/branding/1759/61fd4f33-119b-494d-9283-8362b5ad33cb/css/branding-styles.css' rel='stylesheet' type='text/css' media='screen' />
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css' />
+    <link href='https://dkqgk8jq4t1u0.cloudfront.net/branding/2273/65261745-ee60-4082-a7a4-335a3ce13dbe/css/branding-styles.css' rel='stylesheet' type='text/css' media='screen' />
+    <!-- css block end -->
+
+    <script src="http://sbx.dabox.se:9000/res/cocobox/react-intl/locale-data/sv.js"></script>
+
+    <!-- TODO: Lots of junk here, clean it up -->
+
+    <!-- js block from http://sb.dabox.se:9000/cpweb/site/home/1004 -->
+    <!--<script src="http://sbx.dabox.se:9000/res/common/js/libs/modernizr.js"></script>-->
+    <!-- RequireJS page -->
+    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/es5-shim.js"></script>-->
+    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/es6-shim.js"></script>-->
+    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/jquery.js"></script>-->
+    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/require.js"></script>-->
+    <!--<script>if(requirejs) {requirejs.config({baseUrl: "http://sbx.dabox.se:9000/res/cocobox/js/libs/"});} else { console.log("requirejs not available (??)");}</script>-->
+    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/main.js"></script>-->
+    <!-- end js block -->
+
+
+    <script type="text/javascript" src="http://sb.dabox.se:9000/leweb/lapi/text/var?name=translations&locale=sv&bundle=reporting"></script>
+</head>
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+<script>
+  window.appContextPath='/';
+  window.ccbUserInfo={"uid":1853,"social":{"facebookEnabled":true,"facebookConnected":false,"linkedinEnabled":true,"googleEnabled":true,"googleConnected":false,"linkedinConnected":false},"t24h":true,"portalAccess":{"isMultiCpAdmin":true,"isCpAvailable":true,"isTpAvailable":true,"isBoAvailable":true,"isBillingAvailable":false},"last_name":"Doe","sow":"M","realm":"F029DB6664550B0D","elevio_hash":"9c9a37b039c6569370bb9bd664d54ed92028020cf644bba75cf1b4d330c02e33","locale":"sv","first_name":"Jane","email":"jane.doe@learnifier.com"};
+  window.translations.locale = window.ccbUserInfo.locale;
+  window.appState = {
+    config: {
+      loggedInUser: window.ccbUserInfo,
+      contextPath: window.appContextPath,
+      apiUrls: {
+        'apiweb': 'http://sb.dabox.se:9000/apiweb',
+        'leweb': 'http://sb.dabox.se:9000/leweb/lapi',
+        'reportingApi': 'http://sb.dabox.se:9000/reporting-api/api',
+      },
+      baseUrls: {
+        'boweb': 'http://sb.dabox.se:9000/boweb/',
+        'cpweb': 'http://sb.dabox.se:9000/cpweb/',
+        'tpweb': 'http://sb.dabox.se:9000/tpweb/',
+        'upweb': 'http://sb.dabox.se:9000/upweb/',
+        'pdweb': 'http://sb.dabox.se:9000/pdweb/',
+        'loginSite': 'http://sb.dabox.se:9000/loginsite'
+      },
+      branding:
+        [{"cpPrimaryColor":"#5AB9D2","cpNavColor":"#F29696","cpSecondaryColor":"#66B0DD","realmId":"F029DB6664550B0D","favicon":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier.ico","cpLogo":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier_red.png","loginsite_backgroundimage":"cr://cocoboxint@F029DB6664550B0D/multirealm/crowd.jpg","loginsite_box_backgroundcolor":"rgba(52,52,52,0.6)","loginsite_footer_textcolor":"#ffffff","cpLogo.y":"0","cpLogo.x":"0","cpLogo.w":"234","extradefaultfont":"'Ubuntu', sans-serif;","apple-touch-icon-120":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-120.png","loginsite_box_textcolor":"#ffffff","apple-touch-icon-152":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-152.png","logoUrl":"http://daoh1i0fuvcjv.cloudfront.net/branding/50/a3c8f874-7ffe-4af3-8816-42e0859ca25d/img/cpl-large.png","loginsite_logo":"cr://cocoboxint@F029DB6664550B0D/multirealm/logosmalltextinred.png","loginsite_footer_backgroundcolor":"#A9C44F","apple-touch-icon-76":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-76.png","cpLogo.h":"60","extracss":"//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic","apple-touch-icon":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-60.png"},{"cpSecondaryColor":"#CC66DE","cpNavColor":"#E8BF3A","cpPrimaryColor":"#6658D1","upTopbarBackgroundColor":"#8A3F3F","projectId":1687},{"cpSecondaryColor":"#CC66DE","cpNavColor":"#E8BF3A","cpPrimaryColor":"#6658D1","upTopbarBackgroundColor":"#8A3F3F","userId":1853}],
+      webfeatures: {"coursecatalog":true,"chat":true},
+      translations: window.translations,
+      referrer: "http://learnifier.com",
+      features: {
+        courseCatalog: {
+          value: false,
+          upgradable: true
+        },
+        branding: {
+          value: true,
+          upgradable: false
+        },
+        administrators: {
+          value: 122,
+          upgradable: false
+        }
+      },
+      debugPanel: true,
+      // scope: "O1022",
+      // scope: "P1022",
+      scope: "R",
+    }
+  };
+
+</script>
+<div id="es-reporting-root" class="es-lolweb-root">
+    <svg id="spinner" style="position: absolute; left: 50%; margin-left: -15px; top: 50%; margin-top: -15px;" width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="icons/24/spinner" transform="translate(-2.000000, -2.000000)">
+                <g id="Group-2" transform="translate(12.000000, 12.000000) rotate(90.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)">
+                    <path d="M10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 15.5228475,20 10,20 Z M10,17 C13.8659932,17 17,13.8659932 17,10 C17,6.13400675 13.8659932,3 10,3 C6.13400675,3 3,6.13400675 3,10 C3,13.8659932 6.13400675,17 10,17 Z" id="Combined-Shape" fill="#FFFFFF" opacity="0.300000012"></path>
+                    <path d="M3.75282075,2.19102594 C1.46504796,4.02362159 0,6.84072065 0,10 C0,15.5228475 4.4771525,20 10,20 C15.5228475,20 20,15.5228475 20,10 C20,6.61090782 18.3140583,3.61558842 15.7351137,1.8069805 L14.0145796,4.26488635 C15.8198408,5.53091189 17,7.62763547 17,10 C17,13.8659932 13.8659932,17 10,17 C6.13400675,17 3,13.8659932 3,10 C3,7.78850446 4.02553357,5.81653512 5.62697453,4.53371816 L3.75282075,2.19102594 Z" id="Combined-Shape" fill="#DE5243"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
 </html>
