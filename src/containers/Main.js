@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import {get} from '../utils/fetchOptions';
 export class Main extends Component {
 
   constructor(props) {
@@ -17,15 +17,17 @@ export class Main extends Component {
 
   _testEndpoint = async () => {
     try {
-      const resp = await fetch(window.appState.config.apiUrls.blurp + "/participation/Oyvzt3dvtijkmidOSjn6/activity/340fb9b5-f318-49ea-be74-b14debf01312");
+      const resp = await fetch(window.appState.config.apiUrls.blurp + "/participation/Oyvzt3dvtijkmidOSjn6/activity/340fb9b5-f318-49ea-be74-b14debf01312", get());
       if(resp.status !== 200) {
-        this.setState({msg: "Got status: " + resp.status});
+        this.setState({msg: "Got http status: " + resp.status});
+        console.log("res = ", resp);
       } else {
-        this.setState({msg: "alright"});
+        const data = await resp.json();
+        console.log("Data = ", data);
+        this.setState({msg: "Now rendering activity '" + data.activity.title + "'"});
       }
-      console.log("res = ", resp);
     } catch(e) {
-      this.setState({msg: "error: " + e});
+      this.setState({msg: "Got an error from fetch: " + e});
       console.log("error = ", e);
     }
   };
