@@ -17,9 +17,13 @@ export class Main extends Component {
 
   _testEndpoint = async () => {
     try {
-      const res = await fetch(window.appState.config.apiUrls.blurp + "/participation/Oyvzt3dvtijkmidOSjn6/activity/340fb9b5-f318-49ea-be74-b14debf01312");
-      this.setState({msg: "alright"});
-      console.log("res = ", res);
+      const resp = await fetch(window.appState.config.apiUrls.blurp + "/participation/Oyvzt3dvtijkmidOSjn6/activity/340fb9b5-f318-49ea-be74-b14debf01312");
+      if(resp.status !== 200) {
+        this.setState({msg: "Got status: " + resp.status});
+      } else {
+        this.setState({msg: "alright"});
+      }
+      console.log("res = ", resp);
     } catch(e) {
       this.setState({msg: "error: " + e});
       console.log("error = ", e);
