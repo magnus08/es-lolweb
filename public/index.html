@@ -41,20 +41,6 @@
 
     <script src="http://sbx.dabox.se:9000/res/cocobox/react-intl/locale-data/sv.js"></script>
 
-    <!-- TODO: Lots of junk here, clean it up -->
-
-    <!-- js block from http://sb.dabox.se:9000/cpweb/site/home/1004 -->
-    <!--<script src="http://sbx.dabox.se:9000/res/common/js/libs/modernizr.js"></script>-->
-    <!-- RequireJS page -->
-    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/es5-shim.js"></script>-->
-    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/es6-shim.js"></script>-->
-    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/jquery.js"></script>-->
-    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/require.js"></script>-->
-    <!--<script>if(requirejs) {requirejs.config({baseUrl: "http://sbx.dabox.se:9000/res/cocobox/js/libs/"});} else { console.log("requirejs not available (??)");}</script>-->
-    <!--<script src="http://sbx.dabox.se:9000/res/cocobox/js/libs/main.js"></script>-->
-    <!-- end js block -->
-
-
     <script type="text/javascript" src="http://sb.dabox.se:9000/leweb/lapi/text/var?name=translations&locale=sv&bundle=reporting"></script>
 </head>
 <body>
@@ -71,7 +57,7 @@
       contextPath: window.appContextPath,
       apiUrls: {
         'apiweb': 'http://sb.dabox.se:9000/apiweb',
-        'leweb': 'http://sb.dabox.se:9000/leweb/lapi',
+        'blurp': 'http://sb.dabox.se:9000/leweb/lapi',
         'reportingApi': 'http://sb.dabox.se:9000/reporting-api/api',
       },
       baseUrls: {
@@ -86,7 +72,6 @@
         [{"cpPrimaryColor":"#5AB9D2","cpNavColor":"#F29696","cpSecondaryColor":"#66B0DD","realmId":"F029DB6664550B0D","favicon":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier.ico","cpLogo":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier_red.png","loginsite_backgroundimage":"cr://cocoboxint@F029DB6664550B0D/multirealm/crowd.jpg","loginsite_box_backgroundcolor":"rgba(52,52,52,0.6)","loginsite_footer_textcolor":"#ffffff","cpLogo.y":"0","cpLogo.x":"0","cpLogo.w":"234","extradefaultfont":"'Ubuntu', sans-serif;","apple-touch-icon-120":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-120.png","loginsite_box_textcolor":"#ffffff","apple-touch-icon-152":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-152.png","logoUrl":"http://daoh1i0fuvcjv.cloudfront.net/branding/50/a3c8f874-7ffe-4af3-8816-42e0859ca25d/img/cpl-large.png","loginsite_logo":"cr://cocoboxint@F029DB6664550B0D/multirealm/logosmalltextinred.png","loginsite_footer_backgroundcolor":"#A9C44F","apple-touch-icon-76":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-76.png","cpLogo.h":"60","extracss":"//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic","apple-touch-icon":"cr://cocoboxint@F029DB6664550B0D/multirealm/learnifier-60.png"},{"cpSecondaryColor":"#CC66DE","cpNavColor":"#E8BF3A","cpPrimaryColor":"#6658D1","upTopbarBackgroundColor":"#8A3F3F","projectId":1687},{"cpSecondaryColor":"#CC66DE","cpNavColor":"#E8BF3A","cpPrimaryColor":"#6658D1","upTopbarBackgroundColor":"#8A3F3F","userId":1853}],
       webfeatures: {"coursecatalog":true,"chat":true},
       translations: window.translations,
-      referrer: "http://learnifier.com",
       features: {
         courseCatalog: {
           value: false,
@@ -101,10 +86,7 @@
           upgradable: false
         }
       },
-      debugPanel: true,
-      // scope: "O1022",
-      // scope: "P1022",
-      scope: "R",
+      debugPanel: true
     }
   };
 
